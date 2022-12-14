@@ -1,0 +1,70 @@
+.todo-card-wrapper {
+  box-shadow: 0 2px 12px 0 rgb(0 0 0 / 10%);
+  border-radius: 8px;
+  border: 1px solid #ebeef5;
+  background-color: #fff;
+  overflow: hidden;
+  color: #303133;
+  transition: .3s;
+  display: flex;
+
+  width: 400px;
+  padding: 14px;
+
+  &:hover {
+    box-shadow: 0 2px 12px 0 rgb(0 0 0 / 22%);
+  }
+}
+
+.todo-state {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 50px;
+
+  .link-line {
+    width: 28px;
+    height: 19px;
+    margin: 11px 0 0 24px;
+    border-left: 1.5px solid #dee0e3;
+    border-top: 1.5px solid #dee0e3;
+    border-top-left-radius: 10px;
+    position: relative;
+
+    .link-dote {
+      position: absolute;
+      right: -3px;
+      top: -2.5px;
+      width: 4px;
+      height: 4px;
+      border-radius: 3px;
+      background: #dee0e3;
+    }
+  }
+  .check-box {
+    transform: scale(1.5);
+  }
+}
+
+.todo-info {
+  margin-left: 5px;
+
+  .todo-dep {
+    color: #84868a;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+  }
+  .todo-title {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 34px;
+    color: #101011;
+  }
+  .todo-remark {
+    color: #95989d;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+  }
+}

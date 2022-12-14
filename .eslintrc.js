@@ -1,21 +1,47 @@
 module.exports = {
-  env: {
-    browser: true,
-    es2021: true
+  'env': {
+    'browser': true,
+    'es2021': true
   },
-  extends: [
+  'extends': [
+    'eslint:recommended',
     'plugin:react/recommended',
-    'standard-with-typescript'
+    'plugin:@typescript-eslint/recommended',
+    'prettier'
   ],
-  overrides: [
+  'overrides': [
   ],
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module'
+  'parser': '@typescript-eslint/parser',
+  'parserOptions': {
+    'ecmaVersion': 'latest',
+    'sourceType': 'module'
   },
-  plugins: [
-    'react'
+  'plugins': [
+    'react',
+    '@typescript-eslint'
   ],
-  rules: {
+  'rules': {
+    'strict': 2,
+    'indent': [
+      'error',
+      2
+    ],
+    'quotes': [
+      'error',
+      'single'
+    ],
+    'semi': [
+      'warn',
+      'always'
+    ],
+    'no-duplicate-case': 2,
+    'no-func-assign': 2,
+    'no-unreachable': 1,
+    'block-scoped-var': 2,
+    'default-case': 1,
+    'no-empty-function': 2,
+    'no-multi-spaces': 1,
+    'no-param-reassign': 2,
+    '@typescript-eslint/ban-ts-comment': 0,
   }
-}
+};

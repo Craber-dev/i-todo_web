@@ -1,24 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import style from './App.module.less';
+import DevTag from '@/components/DevTag';
+import GlobalHeader from '@/containers/GlobalHeader';
+import Home from '@/pages/Home';
 
-function App() {
+import '@/assets/style/reset.css';
+
+function App (): React.ReactElement {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={style.App}>
+      <DevTag text="React-本地开发" position="right-top" />
+      <div className={style.header}>
+        <GlobalHeader />
+      </div>
+      <div className={style.body}>
+        <Home />
+      </div>
     </div>
   );
 }
